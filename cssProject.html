@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS Web Page</title>
+
+<style>
+
+		
+		body {
+			margin:0;
+			padding:0;
+			line-height: 1.5em;
+		}
+		
+		#header {
+			background: black;
+			font-family: Arial; 
+			height: 80px;
+		}
+		
+		#contentwrapper {
+			float: left;
+			width: 100%;
+		}
+		
+		#contentcolumn {
+			margin: 0 230px 0 230px;
+		}
+		
+	   #leftcolumn {
+			float: left;
+			width: 230px;
+			margin-left: -100% ; 
+			background: #24C8FF;
+		}
+		
+		#rightcolumn {
+			float: left;
+			width: 230px;
+			margin-left: -230px;
+			background: #FFFB00;
+		}
+		
+		.innertext {
+			margin: 20px;
+			font-family: Arial; 
+			color: #5E5E5E;
+		}
+		
+		#footer {
+			clear: left; /* Cannot float on Left */
+			width: 100%;
+			background: black;
+			color: #FFF;
+			font-family: Arial;
+			text-align: center;
+			padding: 4px;
+		}
+		
+		/* ##### Navigation Bar ##### */
+		
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			background-color: #000;
+		}
+		
+		li {
+			float: left;
+			border-right:1px solid #bbb;
+		}
+		
+		li:last-child {
+			border-right: none;
+		}
+		
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		
+		li a:hover:not(.active) {
+			background-color: 	#808080;
+		}
+		
+		.active {
+			background-color: #0099ff;
+		}	
+		
+		/* ###### Responsive layout CSS ###### */
+		
+		@media (max-width: 840px){ /* Drop Right Column Down */
+		
+		#leftcolumn {
+				margin-left:-100%;
+			}
+			
+		#rightcolumn {
+				float: none;
+				width: 100%;
+				margin-left:0;
+				clear: both;
+			}
+			
+		#contentcolumn {
+				margin-right:0; /*Set margin to LeftColumnWidth*/
+			}
+		
+		}
+		
+		@media (max-width: 600px){ /* Drop Left Column Down */
+		
+			#leftcolumn {
+				float: none;
+				width: 100%;
+				clear: left;
+				margin-left: 0;
+			}
+			
+			#contentcolumn {
+				margin-left: 0;
+			}
+		
+		}
+		
+
+</style>
+
+</head>
+<body>
+
+<div id="container">
+
+	<div id="header">
+	
+		<ul style="display: inline;">
+		  <li><a class="active" href="#home">Home</a></li>
+		  <li><a href="#news">About</a></li>
+		  <li><a href="#contact">News</a></li>
+		  <li><a href="#about">Contact</a></li>		  
+		</ul>
+	
+	</div>
+	
+	<div id="contentwrapper">
+	
+		<div id="contentcolumn">
+		
+			<div class="innertext">
+			
+				<b>Cascading Style Sheets (CSS)</b> <br />
+				CSS is designed to enable the separation of presentation and content,
+				including layout, colors, and fonts.[3] This separation can improve
+				content accessibility; provide more flexibility and control in the 
+				specification of presentation characteristics; enable multiple web
+				pages to share formatting by specifying the relevant CSS in a 
+				separate .css file, which reduces complexity and repetition in the
+				structural content; and enable the .css file to be cached to improve
+				the page load speed between the pages that share the file and its formatting.
+				<br/>
+				Separation of formatting and content also makes it feasible to present the
+				same markup page in different styles for different rendering methods, such 
+				as on-screen, in print, by voice (via speech-based browser or screen reader),
+				and on Braille-based tactile devices. CSS also has rules for alternate
+				formatting if the content is accessed on a mobile device.
+			</div>	
+		</div>
+	</div>
+		<div id="rightcolumn">
+		<div class="innertext">
+			<b>Advantages: </b><br />
+			CSS facilitates publication of content in multiple presentation formats based 
+			on nominal parameters. Nominal parameters include explicit user preferences,
+			different web browsers, the type of device being used to view the content 
+			(a desktop computer or mobile device), the geographic location of the user 
+			and many other variables.
+			</br>
+			When CSS is used effectively, in terms of inheritance and "cascading",
+			a global style sheet can be used to affect and style elements site-wide.
+			If the situation arises that the styling of the elements should be 
+			changed or adjusted, these changes can be made by editing rules in the 
+			global style sheet.
+		</div>
+	</div>
+	
+	<div id="leftcolumn">
+		<div class="innertext">
+			<b>Fascilates: </b><br />
+			The name cascading comes from the specified priority scheme to determine
+			which style rule applies if more than one rule matches a particular element. 
+			This cascading priority scheme is predictable.
+			</br/>
+			The CSS specifications are maintained by the World Wide Web Consortium (W3C).
+			Internet media type (MIME type) text/css is registered for use with CSS by 
+			RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS 
+			documents.
+				
+		</div>
+	</div>
+		
+
+	
+	<div id="footer">Footer</div>
+	
+	</div>
+	
+</body>
+</html>
